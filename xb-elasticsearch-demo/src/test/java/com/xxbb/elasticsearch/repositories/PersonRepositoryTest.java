@@ -1,6 +1,7 @@
 package com.xxbb.elasticsearch.repositories;
 
 import com.xxbb.elasticsearch.entities.Person;
+import com.xxbb.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import com.xxbb.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,10 +22,18 @@ public class PersonRepositoryTest {
     @Resource
     private ElasticsearchRestTemplate elasticsearchTemplate;
 
+    @Resource
+    private ElasticsearchOperations elasticsearchOperations;
+
     @Test
     public void testSaveAll() {
         List<Person> persons = createPersonEntities(20);
         repository.saveAll(persons);
+    }
+
+    @Test
+    public void testDelete() {
+        repository.deleteAll();
     }
 
     private List<Person> createPersonEntities(int numberOfEntity) {
