@@ -1,0 +1,6 @@
+package com.xxbb.springframework.data.elasticsearch.repositories.complex.custommethod.manualwiring;
+
+import com.xxbb.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+
+public interface ComplexElasticsearchRepositoryManualWiring extends ElasticsearchRepository<ComplexCustomMethodRepositoryManualWiringTests.SampleEntity, String>, ComplexElasticsearchRepositoryCustom {
+}

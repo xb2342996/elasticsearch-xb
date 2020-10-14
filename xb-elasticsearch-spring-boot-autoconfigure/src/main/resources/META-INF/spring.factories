@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.xxbb.springframework.boot.autoconfigure.elasticsearch.ElasticsearchRestClientAutoConfiguration,\
+com.xxbb.springframework.boot.autoconfigure.data.ElasticsearchDataAutoConfiguration,\
+com.xxbb.springframework.boot.autoconfigure.data.ElasticsearchRepositoriesAutoConfiguration

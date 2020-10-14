@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: espackage-test
+  elasticsearch:
+    rest:
+      uris: 172.16.68.128:9200
